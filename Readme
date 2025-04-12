@@ -27,3 +27,9 @@ Namespace: default
 Click Create.
 
 Then hit Sync to deploy.
+
+5. Access the App
+
+kubectl port-forward svc/simple-web 8085:80
+http://localhost:8085
+
