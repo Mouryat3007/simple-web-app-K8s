@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: simple-web
-          image: YOUR_DOCKER_USERNAME/simple-web:latest
+          image: mouryat3007/webapp-argocd
           ports:
             - containerPort: 80
