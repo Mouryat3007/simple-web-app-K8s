@@ -1,2 +1,29 @@
 This is simple app to deploy via ArgoCd
 The steps can be found below
+<h1> Build & Push the Docker Image
+docker build -t YOUR_DOCKER_USERNAME/simple-web .
+docker push YOUR_DOCKER_USERNAME/simple-web:latest
+Push Code to GitHub
+https://github.com/YOUR_USERNAME/simple-web-app
+
+Deploy via ArgoCD GUI
+
+Now in ArgoCD GUI:
+
+Application Name: simple-web
+
+Project: default
+
+Repo URL: https://github.com/YOUR_USERNAME/simple-web-app.git
+
+Path: k8s
+
+Revision: HEAD
+
+Cluster URL: https://kubernetes.default.svc
+
+Namespace: default
+
+Click Create.
+
+Then hit Sync to deploy.
