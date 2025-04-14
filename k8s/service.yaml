@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: simple-web
 spec:
-  type: LoadBalancer
   selector:
     app: simple-web
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
+      nodePort: 30036
+  type: NodePort
